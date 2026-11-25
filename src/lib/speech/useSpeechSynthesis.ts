@@ -156,10 +156,11 @@ export function useSpeechSynthesis(text: string) {
 
         try {
             synthesis.speak(utterance);
-        } catch {
+        } catch (error) {
             failedChunkIndexRef.current = chunkIndex;
             updateStatus('error');
-            setErrorMessage('読み上げを開始できませんでした。失敗したチャンクの先頭から再試行できます。');
+            const detail = error instanceof Error ? ` (${error.message})` : '';
+            setErrorMessage(`読み上げを開始できませんでした${detail}。失敗したチャンクの先頭から再試行できます。`);
         }
     }, [updateStatus]);
 

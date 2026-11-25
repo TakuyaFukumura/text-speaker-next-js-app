@@ -124,6 +124,14 @@ describe('useSpeechSynthesis', () => {
         expect(result.current.canSpeak).toBe(true);
     });
 
+    it('does not allow playback for whitespace-only text', () => {
+        const {result} = renderHook(() => useSpeechSynthesis(' \n\u3000'));
+
+        expect(result.current.canSpeak).toBe(false);
+        act(() => result.current.play());
+        expect(synthesis.speak).not.toHaveBeenCalled();
+    });
+
     it('reads consecutive chunks and updates progress until completion', () => {
         const text = 'あ'.repeat(501);
         const {result} = renderHook(() => useSpeechSynthesis(text));
