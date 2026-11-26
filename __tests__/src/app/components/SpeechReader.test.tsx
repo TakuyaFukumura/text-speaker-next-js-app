@@ -84,7 +84,7 @@ describe('SpeechReader', () => {
 
         expect(speechState.setSelectedVoiceURI).toHaveBeenCalledWith(alternateJapaneseVoice.voiceURI);
         expect(speechState.setRate).toHaveBeenCalledWith(1.5);
-        expect(screen.getByText(/入力したテキストや設定は保存せず/)).toBeInTheDocument();
+        expect(screen.queryByText(/入力したテキストや設定は保存せず/)).not.toBeInTheDocument();
     });
 
     it('announces playback progress and presents pause and resume controls', () => {

@@ -170,9 +170,6 @@ export default function SpeechReader() {
                     )}
                 </div>
 
-                <p className="mt-6 text-sm text-gray-600 dark:text-gray-300">
-                    入力したテキストや設定は保存せず、アプリから外部サービスへ送信しません。ブラウザーまたは端末の音声合成処理が外部通信を伴うかは保証できません。
-                </p>
             </section>
         </main>
     );
