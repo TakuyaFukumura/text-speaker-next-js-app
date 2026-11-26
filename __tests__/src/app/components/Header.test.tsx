@@ -44,7 +44,7 @@ describe('Header', () => {
         it('ヘッダータイトルが表示される', () => {
             renderWithProvider();
 
-            expect(screen.getByText('text-speaker-next-js-app')).toBeInTheDocument();
+            expect(screen.getByRole('link', {name: 'text-speaker'})).toHaveAttribute('href', '/');
         });
 
         it('ヘッダーのHTML構造が正しい', () => {
@@ -53,6 +53,12 @@ describe('Header', () => {
             const header = screen.getByRole('banner');
             expect(header).toBeInTheDocument();
             expect(header.tagName).toBe('HEADER');
+        });
+
+        it('アプリ説明ページへのリンクが表示される', () => {
+            renderWithProvider();
+
+            expect(screen.getByRole('link', {name: '説明'})).toHaveAttribute('href', '/about');
         });
 
         it('テーマ切り替えボタンが表示される', () => {

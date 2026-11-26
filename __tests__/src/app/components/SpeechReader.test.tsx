@@ -74,6 +74,12 @@ describe('SpeechReader', () => {
         expect(screen.getByRole('button', {name: '再生'})).toBeDisabled();
     });
 
+    it('does not show the introductory description', () => {
+        render(<SpeechReader/>);
+
+        expect(screen.queryByText('テキストを入力し、ブラウザーまたは端末で利用できる日本語音声で読み上げます。')).not.toBeInTheDocument();
+    });
+
     it('exposes voice and speed controls with accessible labels', () => {
         render(<SpeechReader/>);
         const voiceSelect = screen.getByRole('combobox', {name: '音声'});
@@ -84,7 +90,7 @@ describe('SpeechReader', () => {
 
         expect(speechState.setSelectedVoiceURI).toHaveBeenCalledWith(alternateJapaneseVoice.voiceURI);
         expect(speechState.setRate).toHaveBeenCalledWith(1.5);
-        expect(screen.getByText(/入力したテキストや設定は保存せず/)).toBeInTheDocument();
+        expect(screen.queryByText(/入力したテキストや設定は保存せず/)).not.toBeInTheDocument();
     });
 
     it('announces playback progress and presents pause and resume controls', () => {
