@@ -36,7 +36,7 @@ export default function Header() {
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center gap-6">
                         <h1 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                            text-speaker
+                            <Link href="/">text-speaker</Link>
                         </h1>
                         <nav aria-label="メインナビゲーション">
                             <Link

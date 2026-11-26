@@ -44,7 +44,7 @@ describe('Header', () => {
         it('ヘッダータイトルが表示される', () => {
             renderWithProvider();
 
-            expect(screen.getByText('text-speaker')).toBeInTheDocument();
+            expect(screen.getByRole('link', {name: 'text-speaker'})).toHaveAttribute('href', '/');
         });
 
         it('ヘッダーのHTML構造が正しい', () => {
