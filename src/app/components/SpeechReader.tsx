@@ -23,7 +23,8 @@ export default function SpeechReader() {
     const canPlay = speech.canSpeak && !isOverLimit && speech.status !== 'speaking' && speech.status !== 'paused';
 
     return (
-        <main className="font-sans min-h-[calc(100vh-4rem)] bg-linear-to-br from-blue-50 to-indigo-100 px-4 py-10 dark:from-gray-900 dark:to-gray-800">
+        <main
+            className="font-sans min-h-[calc(100vh-4rem)] bg-linear-to-br from-blue-50 to-indigo-100 px-4 py-10 dark:from-gray-900 dark:to-gray-800">
             <section className="mx-auto max-w-3xl rounded-2xl bg-white p-6 shadow-lg sm:p-10 dark:bg-gray-800">
                 <h1 className="mb-2 text-3xl font-bold text-gray-800 dark:text-gray-100">
                     テキスト読み上げ
@@ -60,7 +61,8 @@ export default function SpeechReader() {
 
                 <div className="mt-6 grid gap-5 sm:grid-cols-2">
                     <div>
-                        <label htmlFor="speech-voice" className="mb-2 block font-medium text-gray-800 dark:text-gray-200">
+                        <label htmlFor="speech-voice"
+                               className="mb-2 block font-medium text-gray-800 dark:text-gray-200">
                             音声
                         </label>
                         <select
@@ -79,7 +81,8 @@ export default function SpeechReader() {
                         </select>
                     </div>
                     <div>
-                        <label htmlFor="speech-rate" className="mb-2 block font-medium text-gray-800 dark:text-gray-200">
+                        <label htmlFor="speech-rate"
+                               className="mb-2 block font-medium text-gray-800 dark:text-gray-200">
                             読み上げ速度: {speech.rate.toFixed(1)}x
                         </label>
                         <input
@@ -136,7 +139,8 @@ export default function SpeechReader() {
                 </div>
 
                 <div className="mt-6 rounded-lg bg-gray-50 p-4 dark:bg-gray-900">
-                    <p role="status" aria-live="polite" aria-atomic="true" className="font-medium text-gray-800 dark:text-gray-200">
+                    <p role="status" aria-live="polite" aria-atomic="true"
+                       className="font-medium text-gray-800 dark:text-gray-200">
                         状態: {statusLabels[speech.status]}
                     </p>
                     {speech.totalChunks > 0 && isActive && (
