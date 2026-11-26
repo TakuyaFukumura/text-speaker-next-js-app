@@ -55,10 +55,10 @@ describe('Header', () => {
             expect(header.tagName).toBe('HEADER');
         });
 
-        it('アプリ解説ページへのリンクが表示される', () => {
+        it('アプリ説明ページへのリンクが表示される', () => {
             renderWithProvider();
 
-            expect(screen.getByRole('link', {name: '解説'})).toHaveAttribute('href', '/about');
+            expect(screen.getByRole('link', {name: '説明'})).toHaveAttribute('href', '/about');
         });
 
         it('テーマ切り替えボタンが表示される', () => {
