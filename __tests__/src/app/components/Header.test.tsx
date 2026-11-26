@@ -44,7 +44,7 @@ describe('Header', () => {
         it('ヘッダータイトルが表示される', () => {
             renderWithProvider();
 
-            expect(screen.getByText('text-speaker-next-js-app')).toBeInTheDocument();
+            expect(screen.getByText('text-speaker')).toBeInTheDocument();
         });
 
         it('ヘッダーのHTML構造が正しい', () => {
