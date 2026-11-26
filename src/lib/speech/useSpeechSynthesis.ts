@@ -299,9 +299,9 @@ export function useSpeechSynthesis(text: string) {
 
     return {
         canSpeak: supported &&
-        Boolean(selectedVoice) &&
-        Boolean(text.trim()) &&
-        countGraphemes(text) <= MAX_TEXT_GRAPHEMES,
+            Boolean(selectedVoice) &&
+            Boolean(text.trim()) &&
+            countGraphemes(text) <= MAX_TEXT_GRAPHEMES,
         currentChunk,
         errorMessage,
         isSupported: supported,
