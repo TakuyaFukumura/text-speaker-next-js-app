@@ -58,7 +58,7 @@ describe('Header', () => {
         it('アプリ解説ページへのリンクが表示される', () => {
             renderWithProvider();
 
-            expect(screen.getByRole('link', {name: 'アプリについて'})).toHaveAttribute('href', '/about');
+            expect(screen.getByRole('link', {name: '解説'})).toHaveAttribute('href', '/about');
         });
 
         it('テーマ切り替えボタンが表示される', () => {

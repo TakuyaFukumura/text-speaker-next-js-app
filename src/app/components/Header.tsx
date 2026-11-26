@@ -43,7 +43,7 @@ export default function Header() {
                                 href="/about"
                                 className="text-sm font-medium text-gray-700 hover:text-blue-700 dark:text-gray-300 dark:hover:text-blue-300"
                             >
-                                アプリについて
+                                解説
                             </Link>
                         </nav>
                     </div>

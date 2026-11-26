@@ -5,7 +5,7 @@ export default function AboutPage() {
         <main className="min-h-[calc(100vh-4rem)] bg-linear-to-br from-blue-50 to-indigo-100 px-4 py-10 dark:from-gray-900 dark:to-gray-800">
             <article className="mx-auto max-w-3xl rounded-2xl bg-white p-6 shadow-lg sm:p-10 dark:bg-gray-800">
                 <h1 className="mb-4 text-3xl font-bold text-gray-800 dark:text-gray-100">
-                    アプリについて
+                    解説
                 </h1>
                 <p className="mb-8 text-gray-700 dark:text-gray-300">
                     text-speakerは、入力した文章をブラウザーや端末に搭載された音声で読み上げるアプリです。
