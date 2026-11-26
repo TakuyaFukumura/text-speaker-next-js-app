@@ -29,9 +29,6 @@ export default function SpeechReader() {
                 <h1 className="mb-2 text-3xl font-bold text-gray-800 dark:text-gray-100">
                     テキスト読み上げ
                 </h1>
-                <p className="mb-6 text-sm text-gray-600 dark:text-gray-300">
-                    テキストを入力し、ブラウザーまたは端末で利用できる日本語音声で読み上げます。
-                </p>
 
                 <label htmlFor="speech-text" className="mb-2 block font-medium text-gray-800 dark:text-gray-200">
                     読み上げるテキスト
